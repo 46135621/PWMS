@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 
 namespace PWMS.ModuleClass
 {
@@ -35,7 +36,7 @@ namespace PWMS.ModuleClass
                     FrmManFile.ShowDialog();    //显示窗体
                     FrmManFile.Dispose();
                 }
-                /*
+
                 if (FrmName == "人事资料查询")
                 {
                     PerForm.F_Find FrmFind = new PWMS.PerForm.F_Find();
@@ -43,6 +44,7 @@ namespace PWMS.ModuleClass
                     FrmFind.ShowDialog();
                     FrmFind.Dispose();
                 }
+                /*
                 if (FrmName == "人事资料统计")
                 {
                     PerForm.F_Stat FrmStat = new PWMS.PerForm.F_Stat();
@@ -202,6 +204,7 @@ namespace PWMS.ModuleClass
                 FrmBasic.Dispose();
             }*/
             }
+        }
             #endregion
 
             #region  将MenuStrip控件中的信息添加到treeView控件中
@@ -210,7 +213,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="treeV">TreeView控件</param>
             /// <param name="MenuS">MenuStrip控件</param>
-            void GetMenu(TreeView treeV, MenuStrip MenuS)
+            public void GetMenu(TreeView treeV, MenuStrip MenuS)
             {
                 for (int i = 0; i < MenuS.Items.Count; i++) //遍历MenuStrip组件中的一级菜单项
                 {
@@ -243,7 +246,7 @@ namespace PWMS.ModuleClass
             /// <param name="TableName">表名</param>
             /// <param name="ID">字段名</param>
             /// <returns>返回String对象</returns>
-            String GetAutocoding(string TableName, string ID)
+            public String GetAutocoding(string TableName, string ID)
             {
                 //查找指定表中ID号为最大的记录
                 SqlDataReader MyDR = MyDataClass.getcom("select max(" + ID + ") NID from " + TableName);
@@ -271,7 +274,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="cobox">comboBox控件</param>
             /// <param name="TableName">数据表名称</param>
-            void CoPassData(ComboBox cobox, string TableName)
+            public void CoPassData(ComboBox cobox, string TableName)
             {
                 cobox.Items.Clear();
                 DataClass.MyMeans MyDataClsaa = new PWMS.DataClass.MyMeans();
@@ -294,7 +297,7 @@ namespace PWMS.ModuleClass
             /// <param name="cobox">comboBox控件</param>
             /// <param name="SQLstr">SQL语句</param>
             /// <param name="n">字段位数</param>
-            void CityInfo(ComboBox cobox, string SQLstr, int num)
+            public void CityInfo(ComboBox cobox, string SQLstr, int num)
             {
                 cobox.Items.Clear();
                 DataClass.MyMeans MyDataClsaa = new PWMS.DataClass.MyMeans();
@@ -303,8 +306,8 @@ namespace PWMS.ModuleClass
                 {
                     while (MyDR.Read())
                     {
-                        if (MyDR[n].ToString() != "" && MyDR[num].ToString() != null)
-                            cobox.Items.Add(MyDR[n].ToString());
+                        if (MyDR[num].ToString() != "" && MyDR[num].ToString() != null)
+                            cobox.Items.Add(MyDR[num].ToString());
                     }
                 }
             }
@@ -316,7 +319,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="NDate">日期</param>
             /// <returns>返回String对象</returns>
-            string Date_Format(string NDate)
+            public string Date_Format(string NDate)
             {
                 string sm, sd;
                 int y, m, d;
@@ -350,7 +353,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="NDate">日期</param>
             /// <returns>返回String对象</returns>
-            string Time_Format(string NDate)
+            public string Time_Format(string NDate)
             {
                 string sh, sm, se;
                 int hh, mm, ss;
@@ -385,7 +388,7 @@ namespace PWMS.ModuleClass
             /// <param name="NDate">日期</param>
             /// <param name="ID">数据表名称</param>
             /// <returns>返回String对象</returns>
-            void MaskedTextBox_Format(MaskedTextBox MTBox)
+            public void MaskedTextBox_Format(MaskedTextBox MTBox)
             {
                 MTBox.Mask = "0000-00-00";
                 MTBox.ValidatingType = typeof(System.DateTime);
@@ -404,7 +407,7 @@ namespace PWMS.ModuleClass
             /// <param name="NDate">B2标识</param>
             /// <param name="NDate">B3标识</param>
             /// <param name="NDate">B4标识</param>
-            void Ena_Button(Button B1, Button B2, Button B3, Button B4, int n1, int n2, int n3, int n4)
+            public void Ena_Button(Button B1, Button B2, Button B3, Button B4, int n1, int n2, int n3, int n4)
             {
                 B1.Enabled = Convert.ToBoolean(n1);
                 B2.Enabled = Convert.ToBoolean(n2);
@@ -418,7 +421,7 @@ namespace PWMS.ModuleClass
             /// 清空所有控件下的所有控件.
             /// </summary>
             /// <param name="Con">可视化控件</param>
-            void Clear_Control(Control.ControlCollection Con)
+            public void Clear_Control(Control.ControlCollection Con)
             {
                 foreach (Control C in Con)
                 { //遍历可视化组件中的所有控件
@@ -450,7 +453,7 @@ namespace PWMS.ModuleClass
             /// <param name="TableName">数据表名称</param>
             /// <param name="n">控件的个数</param>
             /// <param name="m">标识，用于判断是添加还是修改</param>
-            void Part_SaveClass(string Sarr, string ID1, string ID2, Control.ControlCollection Contr, string BoxName, string TableName, int num, int m)
+            public void Part_SaveClass(string Sarr, string ID1, string ID2, Control.ControlCollection Contr, string BoxName, string TableName, int num, int m)
             {
                 string tem_Field = "", tem_Value = "";
                 int p = 2;
@@ -531,7 +534,7 @@ namespace PWMS.ModuleClass
             /// <param name="DGrid">DataGridView控件</param>
             /// <param name="GBox">GroupBox控件的数据集</param>
             /// <param name="TName">获取信息控件的部份名称</param>
-            void Show_DGrid(DataGridView DGrid, Control.ControlCollection GBox, string TName)
+            public void Show_DGrid(DataGridView DGrid, Control.ControlCollection GBox, string TName)
             {
                 string sID = "";
                 if (DGrid.RowCount > 0)
@@ -563,7 +566,7 @@ namespace PWMS.ModuleClass
             /// <param name="n">控件个数</param>
             /// <param name="GBox">GroupBox控件的数据集</param>
             /// <param name="TName">获取信息控件的部份名称</param>
-            void Clear_Grids(int num, Control.ControlCollection GBox, string TName)
+            public void Clear_Grids(int num, Control.ControlCollection GBox, string TName)
             {
                 string sID = "";
                 for (int i = 2; i < num; i++)
@@ -587,7 +590,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="DSet">DataSet类</param>
             /// <param name="DGrid">DataGridView控件</param>
-            void Correlation_Table(DataSet DSet, DataGridView DGrid)
+            public void Correlation_Table(DataSet DSet, DataGridView DGrid)
             {
                 DGrid.DataSource = DSet.Tables[0];
                 DGrid.Columns[0].Visible = false;
@@ -604,7 +607,7 @@ namespace PWMS.ModuleClass
             /// <param name="GBox">GroupBox控件的数据集</param>
             /// <param name="TName">获取信息控件的部份名称</param>
             /// <param name="TName">查询关系</param>
-            void Find_Grids(Control.ControlCollection GBox, string TName, string ANDSign)
+            public void Find_Grids(Control.ControlCollection GBox, string TName, string ANDSign)
             {
                 string sID = "";    //定义局部变量
                 if (FindValue.Length > 0)
@@ -674,7 +677,7 @@ namespace PWMS.ModuleClass
             /// <param name="MTbox">MaskedTextBox控件</param>
             /// <param name="NDate">字符型日期</param>
             /// <>
-            bool Estimate_Date(MaskedTextBox MTbox)
+            public bool Estimate_Date(MaskedTextBox MTbox)
             {
                 try
                 {
@@ -697,7 +700,7 @@ namespace PWMS.ModuleClass
             /// <param name="e">KeyPressEventArgs类</param>
             /// <param name="s">文本框的字符串</param>
             /// <param name="n">标识，判断是数字型还是单精度型</param>
-            void Estimate_Key(KeyPressEventArgs e, string s, int num)
+            public void Estimate_Key(KeyPressEventArgs e, string s, int num)
             {
                 if (num == 0)   //只能输入整型
                     if (!(e.KeyChar <= '9' && e.KeyChar >= '0') && e.KeyChar != '\r' && e.KeyChar != '\b')
@@ -735,7 +738,7 @@ namespace PWMS.ModuleClass
             /// <param name="ID">用户编号</param>
             /// <param name="n">权限值</param>
             /// <>
-            void ADD_Pope(string ID, int num)
+            public void ADD_Pope(string ID, int num)
             {
                 DataSet DSet;
                 DSet = MyDataClass.getDataSet("select PopeName from tb_PopeModel", "tb_PopeModel");
@@ -752,7 +755,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="GBox">GroupBox控件的数据集</param>
             /// <param name="TName">获取信息控件的部份名称</param>
-            void Clear_Table(Control.ControlCollection GBox, string TName)
+            public void Clear_Table(Control.ControlCollection GBox, string TName)
             {
                 string sID = "";
                 foreach (Control C in GBox)
@@ -793,7 +796,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="GBox">GroupBox控件的数据集</param>
             /// <param name="TName">获取用户编号</param>
-            void Show_Pope(Control.ControlCollection GBox, string TID)
+            public void Show_Pope(Control.ControlCollection GBox, string TID)
             {
                 string sID = "";
                 string CheckName = "";
@@ -827,7 +830,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="GBox">GroupBox控件的数据集</param>
             /// <param name="TName">获取用户编号</param>
-            void Amend_Pope(Control.ControlCollection GBox, string TID)
+            public void Amend_Pope(Control.ControlCollection GBox, string TID)
             {
                 string CheckName = "";
                 int tt = 0;
@@ -853,7 +856,7 @@ namespace PWMS.ModuleClass
             /// 设置主窗体菜单不可用.
             /// </summary>
             /// <param name="MenuS">MenuStrip控件</param>
-            void MainMenuF(MenuStrip MenuS)
+            public void MainMenuF(MenuStrip MenuS)
             {
                 string Men = "";
                 for (int i = 0; i < MenuS.Items.Count; i++)
@@ -884,7 +887,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="MenuS">MenuStrip控件</param>
             /// <param name="UName">当前登录用户名</param>
-            void MainPope(MenuStrip MenuS, String UName)
+            public void MainPope(MenuStrip MenuS, String UName)
             {
                 string Str = "";
                 string MenuName = "";
@@ -928,7 +931,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="MenuS">MenuStrip控件</param>
             /// <param name="e">TreeView控件的TreeNodeMouseClickEventArgs类</param>
-            void TreeMenuF(MenuStrip MenuS, TreeNodeMouseClickEventArgs e)
+            public void TreeMenuF(MenuStrip MenuS, TreeNodeMouseClickEventArgs e)
             {
                 string Men = "";
                 for (int i = 0; i < MenuS.Items.Count; i++) //遍历MenuStrip控件中主菜单项
@@ -988,7 +991,7 @@ namespace PWMS.ModuleClass
             /// 查询指定范围内生日与合同到期的职工.
             /// </summary>
             /// <param name="i">标识，判断查询的是生日，还是合同</param>
-            void PactDay(int i)
+            public void PactDay(int i)
             {
                 DataSet DSet = MyDataClass.getDataSet("select * from tb_Clew where kind=" + i + " and unlock=1", "tb_clew");
                 if (DSet.Tables[0].Rows.Count > 0)
@@ -1029,7 +1032,7 @@ namespace PWMS.ModuleClass
             /// </summary>
             /// <param name="MID">职工编号</param>
             /// <param name="p">图片的二进制形式</param>
-            void SaveImage(string MID, byte[] p)
+            public void SaveImage(string MID, byte[] p)
             {
                 MyDataClass.con_open();
                 StringBuilder strSql = new StringBuilder();
@@ -1042,4 +1045,3 @@ namespace PWMS.ModuleClass
             #endregion
         }
     }
-}

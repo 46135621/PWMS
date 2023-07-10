@@ -52,11 +52,33 @@
     <Compile Include="F_Login.Designer.cs">
       <DependentUpon>F_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="mainpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainpage.Designer.cs">
+      <DependentUpon>mainpage.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyMeans.cs" />
+    <Compile Include="myModule.cs" />
+    <Compile Include="PerForm\F_Find.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_Find.Designer.cs">
+      <DependentUpon>F_Find.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_ManFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_ManFile.Designer.cs">
+      <DependentUpon>F_ManFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="F_Login.resx">
       <DependentUpon>F_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainpage.resx">
+      <DependentUpon>mainpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,8 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Perform\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PWMS.PerForm
 {
-    public partial class F_ManFile : Form
+    public partial class F_Find : Form
     {
-        public F_ManFile()
+        public F_Find()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace PWMS.PerForm
 {
-    partial class F_ManFile
+    partial class F_Find
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "F_ManFile";
+            this.Text = "F_Find";
         }
 
         #endregion

@@ -12,8 +12,8 @@ namespace PWMS.DataClass
     class MyMeans
     {
         #region  全局变量
-        public static string Login_ID = ""; //定义全局变量，记录当前登录的用户编号
-        public static string Login_Name = "";  //定义全局变量，记录当前登录的用户名
+        public static string Login_ID = "1"; //定义全局变量，记录当前登录的用户编号
+        public static string Login_Name = "123456";  //定义全局变量，记录当前登录的用户名
         public static string Mean_SQL = "", Mean_Table = "", Mean_Field = "";  //定义全局变量，记录“基础信息”各窗体中的表名及SQL语句
         public static SqlConnection My_con;  //定义一个SqlConnection类型的公共变量My_con，用于判断数据库是否连接成功
         public static string M_str_sqlcon = "server=IRAZE-R7000P\\SQL;database=PWMS;uid=sa;pwd=;";
