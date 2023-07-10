@@ -91,5 +91,10 @@ namespace PWMS
                if ((int)(this.Tag) == 2)
                 this.Close();
         }
+
+        private void textName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

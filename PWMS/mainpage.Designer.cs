@@ -72,8 +72,9 @@
             this.基本资料,
             this.资料管理});
             this.基本信息管理.Name = "基本信息管理";
-            this.基本信息管理.Size = new System.Drawing.Size(68, 21);
-            this.基本信息管理.Text = "基本资料";
+            this.基本信息管理.Size = new System.Drawing.Size(92, 21);
+            this.基本信息管理.Text = "基本信息管理";
+            
             // 
             // 基本资料
             // 

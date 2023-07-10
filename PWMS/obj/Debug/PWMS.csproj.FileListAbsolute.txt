@@ -21,3 +21,5 @@ D:\数据库短学期-企业员工人事管理系统\PWMS\PWMS\bin\Debug\PWMS.pd
 D:\数据库短学期-企业员工人事管理系统\PWMS\PWMS\obj\Debug\PWMS.exe
 D:\数据库短学期-企业员工人事管理系统\PWMS\PWMS\obj\Debug\PWMS.pdb
 D:\数据库短学期-企业员工人事管理系统\PWMS\PWMS\obj\Debug\PWMS.mainpage.resources
+D:\数据库短学期-企业员工人事管理系统\PWMS\PWMS\obj\Debug\PWMS.PerForm.F_Basics.resources
+D:\数据库短学期-企业员工人事管理系统\PWMS\PWMS\obj\Debug\PWMS.PerForm.F_ManFile.resources

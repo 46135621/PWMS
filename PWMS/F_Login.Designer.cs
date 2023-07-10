@@ -64,6 +64,7 @@ namespace PWMS
             this.textName.TabIndex = 1;
             this.textName.Text = "用户名";
             this.textName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             this.textName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName_KeyPress);
             // 
             // textPass

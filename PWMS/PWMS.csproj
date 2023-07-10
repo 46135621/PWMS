@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PerForm\F_ManFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_ManFile.Designer.cs">
+      <DependentUpon>F_ManFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,25 +66,33 @@
     </Compile>
     <Compile Include="MyMeans.cs" />
     <Compile Include="myModule.cs" />
+    <Compile Include="PerForm\F_Basics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_Basics.Designer.cs">
+      <DependentUpon>F_Basics.cs</DependentUpon>
+    </Compile>
     <Compile Include="PerForm\F_Find.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PerForm\F_Find.Designer.cs">
       <DependentUpon>F_Find.cs</DependentUpon>
     </Compile>
-    <Compile Include="PerForm\F_ManFile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PerForm\F_ManFile.Designer.cs">
-      <DependentUpon>F_ManFile.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PerForm\F_ManFile.resx">
+      <DependentUpon>F_ManFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Login.resx">
       <DependentUpon>F_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainpage.resx">
       <DependentUpon>mainpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_Basics.resx">
+      <DependentUpon>F_Basics.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

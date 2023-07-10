@@ -29,6 +29,13 @@ namespace PWMS.ModuleClass
         {
             if (n == 1)
             {
+                if (FrmName == "基本资料")  //判断当前要打开的窗体
+                {
+                    PerForm.F_Basics FrmBasics = new PWMS.PerForm.F_Basics();
+                    FrmBasics.Text = "基本资料";   //设置窗体名称
+                    FrmBasics.ShowDialog();    //显示窗体
+                    FrmBasics.Dispose();
+                }
                 if (FrmName == "人事档案浏览")  //判断当前要打开的窗体
                 {
                     PerForm.F_ManFile FrmManFile = new PWMS.PerForm.F_ManFile();
@@ -893,10 +900,10 @@ namespace PWMS.ModuleClass
                 string MenuName = "";
                 DataSet DSet = MyDataClass.getDataSet("select ID from tb_Login where Name='" + UName + "'", "tb_Login");    //获取当前登录用户的信息
                 string UID = Convert.ToString(DSet.Tables[0].Rows[0][0]);   //获取当前用户编号
-                Console.Write(UID);
+                //Console.Write(UID);
                 DSet = MyDataClass.getDataSet("select ID,PopeName,Pope from tb_UserPope where ID='" + UID + "'", "tb_UserPope");    //获取当前用户的权限信息
                 bool bo = false;
-            Console.Write(DSet.Tables[0].Rows[0][1]);
+            //Console.Write(DSet.Tables[0].Rows[0][1]);
                 for (int k = 0; k < DSet.Tables[0].Rows.Count; k++) //遍历当前用户的权限名称
                 {
                     Str = Convert.ToString(DSet.Tables[0].Rows[k][1]);  //获取权限名称
