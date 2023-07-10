@@ -33,14 +33,7 @@ namespace PWMS
             mainpageModule.MainPope(menuStrip1,MyMeans.Login_Name);
         }
 
-        private void 基本资料ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 人事管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
+        
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -62,20 +55,19 @@ namespace PWMS
             mainpageModule.TreeMenuF(menuStrip1, e);
         }
 
-        private void 数据库维护ToolStripMenuItem_Click(object sender, EventArgs e)
+   
+
+        private void 人事档案浏览_Click(object sender, EventArgs e)
         {
+            mainpageModule.Show_Form("人事档案浏览",1);
 
         }
 
-        private void 人事档案浏览ToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void mainpage_Shown(object sender, EventArgs e)
         {
-            mainpageModule.Show_Form("人事档案管理",1);
-
+            //mainpageModule.MainPope(menuStrip1, MyMeans.Login_Name);
         }
 
-        private void 备份还原数据库ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

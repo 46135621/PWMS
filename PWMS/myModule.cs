@@ -29,10 +29,10 @@ namespace PWMS.ModuleClass
         {
             if (n == 1)
             {
-                if (FrmName == "人事档案管理")  //判断当前要打开的窗体
+                if (FrmName == "人事档案浏览")  //判断当前要打开的窗体
                 {
                     PerForm.F_ManFile FrmManFile = new PWMS.PerForm.F_ManFile();
-                    FrmManFile.Text = "人事档案管理";   //设置窗体名称
+                    FrmManFile.Text = "人事档案浏览";   //设置窗体名称
                     FrmManFile.ShowDialog();    //显示窗体
                     FrmManFile.Dispose();
                 }
@@ -83,7 +83,7 @@ namespace PWMS.ModuleClass
                     FrmAddressList.Dispose();
                 }
                 
-                if (FrmName == "备份/还原数据库")
+                if (FrmName == "备份还原数据库")
                 {
                     PerForm.F_HaveBack FrmHaveBack = new PWMS.PerForm.F_HaveBack();
                     FrmHaveBack.Text = "备份/还原数据库";
@@ -893,8 +893,10 @@ namespace PWMS.ModuleClass
                 string MenuName = "";
                 DataSet DSet = MyDataClass.getDataSet("select ID from tb_Login where Name='" + UName + "'", "tb_Login");    //获取当前登录用户的信息
                 string UID = Convert.ToString(DSet.Tables[0].Rows[0][0]);   //获取当前用户编号
+                Console.Write(UID);
                 DSet = MyDataClass.getDataSet("select ID,PopeName,Pope from tb_UserPope where ID='" + UID + "'", "tb_UserPope");    //获取当前用户的权限信息
                 bool bo = false;
+            Console.Write(DSet.Tables[0].Rows[0][1]);
                 for (int k = 0; k < DSet.Tables[0].Rows.Count; k++) //遍历当前用户的权限名称
                 {
                     Str = Convert.ToString(DSet.Tables[0].Rows[k][1]);  //获取权限名称

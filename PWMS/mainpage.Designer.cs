@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.基本信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.人事管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.人事档案浏览ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.人事资料查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.人事资料统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.数据库维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.备份还原数据库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.清空数据库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.系统管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.重新登陆ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.用户设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.系统退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.基本资料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.资料管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.部门类别设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.工资类别设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.职务类别设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.职称类别设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.奖惩类别设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.基本信息管理 = new System.Windows.Forms.ToolStripMenuItem();
+            this.基本资料 = new System.Windows.Forms.ToolStripMenuItem();
+            this.资料管理 = new System.Windows.Forms.ToolStripMenuItem();
+            this.部门类别设置 = new System.Windows.Forms.ToolStripMenuItem();
+            this.工资类别设置 = new System.Windows.Forms.ToolStripMenuItem();
+            this.职务类别设置 = new System.Windows.Forms.ToolStripMenuItem();
+            this.职称类别设置 = new System.Windows.Forms.ToolStripMenuItem();
+            this.奖惩类别设置 = new System.Windows.Forms.ToolStripMenuItem();
+            this.人事管理 = new System.Windows.Forms.ToolStripMenuItem();
+            this.人事档案浏览 = new System.Windows.Forms.ToolStripMenuItem();
+            this.人事资料查询 = new System.Windows.Forms.ToolStripMenuItem();
+            this.人事资料统计 = new System.Windows.Forms.ToolStripMenuItem();
+            this.数据库维护 = new System.Windows.Forms.ToolStripMenuItem();
+            this.备份还原数据库 = new System.Windows.Forms.ToolStripMenuItem();
+            this.清空数据库 = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统管理 = new System.Windows.Forms.ToolStripMenuItem();
+            this.重新登录 = new System.Windows.Forms.ToolStripMenuItem();
+            this.用户设置 = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统退出 = new System.Windows.Forms.ToolStripMenuItem();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,10 +55,10 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.基本信息管理ToolStripMenuItem,
-            this.人事管理ToolStripMenuItem,
-            this.数据库维护ToolStripMenuItem,
-            this.系统管理ToolStripMenuItem});
+            this.基本信息管理,
+            this.人事管理,
+            this.数据库维护,
+            this.系统管理});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 25);
@@ -66,147 +66,142 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // 基本信息管理ToolStripMenuItem
+            // 基本信息管理
             // 
-            this.基本信息管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.基本资料ToolStripMenuItem,
-            this.资料管理ToolStripMenuItem});
-            this.基本信息管理ToolStripMenuItem.Name = "基本信息管理ToolStripMenuItem";
-            this.基本信息管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.基本信息管理ToolStripMenuItem.Text = "基本资料";
-            this.基本信息管理ToolStripMenuItem.Click += new System.EventHandler(this.基本资料ToolStripMenuItem_Click);
+            this.基本信息管理.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.基本资料,
+            this.资料管理});
+            this.基本信息管理.Name = "基本信息管理";
+            this.基本信息管理.Size = new System.Drawing.Size(68, 21);
+            this.基本信息管理.Text = "基本资料";
             // 
-            // 人事管理ToolStripMenuItem
+            // 基本资料
             // 
-            this.人事管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.人事档案浏览ToolStripMenuItem,
-            this.人事资料查询ToolStripMenuItem,
-            this.人事资料统计ToolStripMenuItem});
-            this.人事管理ToolStripMenuItem.Name = "人事管理ToolStripMenuItem";
-            this.人事管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.人事管理ToolStripMenuItem.Text = "人事管理";
-            this.人事管理ToolStripMenuItem.Click += new System.EventHandler(this.人事管理ToolStripMenuItem_Click);
+            this.基本资料.Name = "基本资料";
+            this.基本资料.Size = new System.Drawing.Size(180, 22);
+            this.基本资料.Text = "基本资料";
             // 
-            // 人事档案浏览ToolStripMenuItem
+            // 资料管理
             // 
-            this.人事档案浏览ToolStripMenuItem.Name = "人事档案浏览ToolStripMenuItem";
-            this.人事档案浏览ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.人事档案浏览ToolStripMenuItem.Text = "人事档案浏览";
-            this.人事档案浏览ToolStripMenuItem.Click += new System.EventHandler(this.人事档案浏览ToolStripMenuItem_Click);
+            this.资料管理.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.部门类别设置,
+            this.工资类别设置,
+            this.职务类别设置,
+            this.职称类别设置,
+            this.奖惩类别设置});
+            this.资料管理.Name = "资料管理";
+            this.资料管理.Size = new System.Drawing.Size(180, 22);
+            this.资料管理.Text = "资料管理";
             // 
-            // 人事资料查询ToolStripMenuItem
+            // 部门类别设置
             // 
-            this.人事资料查询ToolStripMenuItem.Name = "人事资料查询ToolStripMenuItem";
-            this.人事资料查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.人事资料查询ToolStripMenuItem.Text = "人事资料查询";
+            this.部门类别设置.Name = "部门类别设置";
+            this.部门类别设置.Size = new System.Drawing.Size(180, 22);
+            this.部门类别设置.Text = "部门类别设置";
             // 
-            // 人事资料统计ToolStripMenuItem
+            // 工资类别设置
             // 
-            this.人事资料统计ToolStripMenuItem.Name = "人事资料统计ToolStripMenuItem";
-            this.人事资料统计ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.人事资料统计ToolStripMenuItem.Text = "人事资料统计";
+            this.工资类别设置.Name = "工资类别设置";
+            this.工资类别设置.Size = new System.Drawing.Size(180, 22);
+            this.工资类别设置.Text = "工资类别设置";
             // 
-            // 数据库维护ToolStripMenuItem
+            // 职务类别设置
             // 
-            this.数据库维护ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.备份还原数据库ToolStripMenuItem,
-            this.清空数据库ToolStripMenuItem});
-            this.数据库维护ToolStripMenuItem.Name = "数据库维护ToolStripMenuItem";
-            this.数据库维护ToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
-            this.数据库维护ToolStripMenuItem.Text = "数据库维护";
-            this.数据库维护ToolStripMenuItem.Click += new System.EventHandler(this.数据库维护ToolStripMenuItem_Click);
+            this.职务类别设置.Name = "职务类别设置";
+            this.职务类别设置.Size = new System.Drawing.Size(180, 22);
+            this.职务类别设置.Text = "职务类别设置";
             // 
-            // 备份还原数据库ToolStripMenuItem
+            // 职称类别设置
             // 
-            this.备份还原数据库ToolStripMenuItem.Enabled = false;
-            this.备份还原数据库ToolStripMenuItem.Name = "备份还原数据库ToolStripMenuItem";
-            this.备份还原数据库ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.备份还原数据库ToolStripMenuItem.Text = "备份/还原数据库";
-            this.备份还原数据库ToolStripMenuItem.Click += new System.EventHandler(this.备份还原数据库ToolStripMenuItem_Click);
+            this.职称类别设置.Name = "职称类别设置";
+            this.职称类别设置.Size = new System.Drawing.Size(180, 22);
+            this.职称类别设置.Text = "职称类别设置";
             // 
-            // 清空数据库ToolStripMenuItem
+            // 奖惩类别设置
             // 
-            this.清空数据库ToolStripMenuItem.Enabled = false;
-            this.清空数据库ToolStripMenuItem.Name = "清空数据库ToolStripMenuItem";
-            this.清空数据库ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.清空数据库ToolStripMenuItem.Text = "清空数据库";
+            this.奖惩类别设置.Name = "奖惩类别设置";
+            this.奖惩类别设置.Size = new System.Drawing.Size(180, 22);
+            this.奖惩类别设置.Text = "奖惩类别设置";
             // 
-            // 系统管理ToolStripMenuItem
+            // 人事管理
             // 
-            this.系统管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.重新登陆ToolStripMenuItem,
-            this.用户设置ToolStripMenuItem,
-            this.系统退出ToolStripMenuItem});
-            this.系统管理ToolStripMenuItem.Name = "系统管理ToolStripMenuItem";
-            this.系统管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.系统管理ToolStripMenuItem.Text = "系统管理";
+            this.人事管理.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.人事档案浏览,
+            this.人事资料查询,
+            this.人事资料统计});
+            this.人事管理.Name = "人事管理";
+            this.人事管理.Size = new System.Drawing.Size(68, 21);
+            this.人事管理.Text = "人事管理";
             // 
-            // 重新登陆ToolStripMenuItem
+            // 人事档案浏览
             // 
-            this.重新登陆ToolStripMenuItem.Enabled = false;
-            this.重新登陆ToolStripMenuItem.Name = "重新登陆ToolStripMenuItem";
-            this.重新登陆ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.重新登陆ToolStripMenuItem.Text = "重新登陆";
+            this.人事档案浏览.Name = "人事档案浏览";
+            this.人事档案浏览.Size = new System.Drawing.Size(180, 22);
+            this.人事档案浏览.Text = "人事档案浏览";
+            this.人事档案浏览.Click += new System.EventHandler(this.人事档案浏览_Click);
             // 
-            // 用户设置ToolStripMenuItem
+            // 人事资料查询
             // 
-            this.用户设置ToolStripMenuItem.Name = "用户设置ToolStripMenuItem";
-            this.用户设置ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.用户设置ToolStripMenuItem.Text = "用户设置";
+            this.人事资料查询.Name = "人事资料查询";
+            this.人事资料查询.Size = new System.Drawing.Size(180, 22);
+            this.人事资料查询.Text = "人事资料查询";
             // 
-            // 系统退出ToolStripMenuItem
+            // 人事资料统计
             // 
-            this.系统退出ToolStripMenuItem.Name = "系统退出ToolStripMenuItem";
-            this.系统退出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.系统退出ToolStripMenuItem.Text = "系统退出";
+            this.人事资料统计.Name = "人事资料统计";
+            this.人事资料统计.Size = new System.Drawing.Size(180, 22);
+            this.人事资料统计.Text = "人事资料统计";
             // 
-            // 基本资料ToolStripMenuItem
+            // 数据库维护
             // 
-            this.基本资料ToolStripMenuItem.Name = "基本资料ToolStripMenuItem";
-            this.基本资料ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.基本资料ToolStripMenuItem.Text = "基本资料";
+            this.数据库维护.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.备份还原数据库,
+            this.清空数据库});
+            this.数据库维护.Name = "数据库维护";
+            this.数据库维护.Size = new System.Drawing.Size(80, 21);
+            this.数据库维护.Text = "数据库维护";
             // 
-            // 资料管理ToolStripMenuItem
+            // 备份还原数据库
             // 
-            this.资料管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.部门类别设置ToolStripMenuItem,
-            this.工资类别设置ToolStripMenuItem,
-            this.职务类别设置ToolStripMenuItem,
-            this.职称类别设置ToolStripMenuItem,
-            this.奖惩类别设置ToolStripMenuItem});
-            this.资料管理ToolStripMenuItem.Name = "资料管理ToolStripMenuItem";
-            this.资料管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.资料管理ToolStripMenuItem.Text = "资料管理";
+            this.备份还原数据库.Enabled = false;
+            this.备份还原数据库.Name = "备份还原数据库";
+            this.备份还原数据库.Size = new System.Drawing.Size(180, 22);
+            this.备份还原数据库.Text = "备份还原数据库";
             // 
-            // 部门类别设置ToolStripMenuItem
+            // 清空数据库
             // 
-            this.部门类别设置ToolStripMenuItem.Name = "部门类别设置ToolStripMenuItem";
-            this.部门类别设置ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.部门类别设置ToolStripMenuItem.Text = "部门类别设置";
+            this.清空数据库.Name = "清空数据库";
+            this.清空数据库.Size = new System.Drawing.Size(180, 22);
+            this.清空数据库.Text = "清空数据库";
             // 
-            // 工资类别设置ToolStripMenuItem
+            // 系统管理
             // 
-            this.工资类别设置ToolStripMenuItem.Name = "工资类别设置ToolStripMenuItem";
-            this.工资类别设置ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.工资类别设置ToolStripMenuItem.Text = "工资类别设置";
+            this.系统管理.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.重新登录,
+            this.用户设置,
+            this.系统退出});
+            this.系统管理.Name = "系统管理";
+            this.系统管理.Size = new System.Drawing.Size(68, 21);
+            this.系统管理.Text = "系统管理";
             // 
-            // 职务类别设置ToolStripMenuItem
+            // 重新登录
             // 
-            this.职务类别设置ToolStripMenuItem.Name = "职务类别设置ToolStripMenuItem";
-            this.职务类别设置ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.职务类别设置ToolStripMenuItem.Text = "职务类别设置";
+            this.重新登录.Enabled = false;
+            this.重新登录.Name = "重新登录";
+            this.重新登录.Size = new System.Drawing.Size(180, 22);
+            this.重新登录.Text = "重新登录";
             // 
-            // 职称类别设置ToolStripMenuItem
+            // 用户设置
             // 
-            this.职称类别设置ToolStripMenuItem.Name = "职称类别设置ToolStripMenuItem";
-            this.职称类别设置ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.职称类别设置ToolStripMenuItem.Text = "职称类别设置";
+            this.用户设置.Name = "用户设置";
+            this.用户设置.Size = new System.Drawing.Size(180, 22);
+            this.用户设置.Text = "用户设置";
             // 
-            // 奖惩类别设置ToolStripMenuItem
+            // 系统退出
             // 
-            this.奖惩类别设置ToolStripMenuItem.Name = "奖惩类别设置ToolStripMenuItem";
-            this.奖惩类别设置ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.奖惩类别设置ToolStripMenuItem.Text = "奖惩类别设置";
+            this.系统退出.Name = "系统退出";
+            this.系统退出.Size = new System.Drawing.Size(180, 22);
+            this.系统退出.Text = "系统退出";
             // 
             // treeView1
             // 
@@ -229,6 +224,7 @@
             this.Name = "mainpage";
             this.Text = "主页面";
             this.Load += new System.EventHandler(this.Mainpage_load);
+            this.Shown += new System.EventHandler(this.mainpage_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -238,25 +234,25 @@
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 基本信息管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 人事管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 人事档案浏览ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 人事资料查询ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 人事资料统计ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 数据库维护ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 备份还原数据库ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 清空数据库ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 重新登陆ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 用户设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 系统退出ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 基本资料ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 资料管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 部门类别设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 工资类别设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 职务类别设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 职称类别设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 奖惩类别设置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 基本信息管理;
+        private System.Windows.Forms.ToolStripMenuItem 人事管理;
+        private System.Windows.Forms.ToolStripMenuItem 人事档案浏览;
+        private System.Windows.Forms.ToolStripMenuItem 人事资料查询;
+        private System.Windows.Forms.ToolStripMenuItem 人事资料统计;
+        private System.Windows.Forms.ToolStripMenuItem 数据库维护;
+        private System.Windows.Forms.ToolStripMenuItem 备份还原数据库;
+        private System.Windows.Forms.ToolStripMenuItem 清空数据库;
+        private System.Windows.Forms.ToolStripMenuItem 重新登录;
+        private System.Windows.Forms.ToolStripMenuItem 用户设置;
+        private System.Windows.Forms.ToolStripMenuItem 系统退出;
+        private System.Windows.Forms.ToolStripMenuItem 基本资料;
+        private System.Windows.Forms.ToolStripMenuItem 资料管理;
+        private System.Windows.Forms.ToolStripMenuItem 部门类别设置;
+        private System.Windows.Forms.ToolStripMenuItem 工资类别设置;
+        private System.Windows.Forms.ToolStripMenuItem 职务类别设置;
+        private System.Windows.Forms.ToolStripMenuItem 职称类别设置;
+        private System.Windows.Forms.ToolStripMenuItem 奖惩类别设置;
         private System.Windows.Forms.TreeView treeView1;
-        public System.Windows.Forms.ToolStripMenuItem 系统管理ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem 系统管理;
     }
 }
